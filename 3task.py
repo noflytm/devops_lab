@@ -9,7 +9,7 @@ Print “YES” if the record is correct. “NO”  if valid, but incorrect.
  And “ERROR” if there are errors in the record
 """
 
-# Import regular expression 
+# Import regular expression
 import re
 
 
