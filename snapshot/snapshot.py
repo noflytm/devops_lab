@@ -58,4 +58,4 @@ def logging():
         if out_to_json == "json":
             out_to_json(json.dumps(Snapshot().__dict__), "log_output.json")
         if out_file == "txt":
-            out_to_txt(Snapshot().__str__(), "log_output.txt")
+            out_to_txt(str(Snapshot()), "log_output.txt")
