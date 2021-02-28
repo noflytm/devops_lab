@@ -7,9 +7,7 @@ Given a lower and upper number bound, output a list of every possible
 self dividing number, including the bounds if possible.
 """
 
-
-# Create function
-def CheckDivide(left, right):
+def CheckDivide(input):
     def selfcheck(s):
         for num in str(s):
             if num == '0' or s % int(num) > 0:
@@ -17,14 +15,15 @@ def CheckDivide(left, right):
         return True
 
     outputs = []
-    for s in range(left, right + 1):
+    for s in range(input[0], input[1] + 1):
         if selfcheck(s):
             outputs.append(s)
     return outputs
 
 
 # Input values
-left, right = int(input("Enter left:")), int(input("Enter right:"))
+input = [int(x) for x in input().split(' ')]
+
 
 # Print result of function
-print(CheckDivide(left, right))
+print(CheckDivide(input))
