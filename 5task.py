@@ -7,6 +7,8 @@ Given a lower and upper number bound, output a list of every possible
 self dividing number, including the bounds if possible.
 """
 
+
+
 def checkdivide(inp):
     def selfcheck(sin):
         for num in str(sin):
@@ -15,6 +17,7 @@ def checkdivide(inp):
         return True
 
     outputs = []
+    
     for s in range(inp[0], inp[1] + 1):
 
         if selfcheck(s):
@@ -24,7 +27,6 @@ def checkdivide(inp):
 
 # Input values
 inputnum = [int(x) for x in input().split(' ')]
-
 
 # Print result of function
 print(checkdivide(inputnum))
