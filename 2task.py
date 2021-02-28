@@ -1,6 +1,7 @@
 """ 2.	Find common items in 2
  lists without duplicates.
  Sort result list before output.
+ 
 """
 list1 = list(map(int, input().split()))
 list1.sort()
