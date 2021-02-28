@@ -8,7 +8,6 @@ self dividing number, including the bounds if possible.
 """
 
 
-
 def checkdivide(inp):
     def selfcheck(sin):
         for num in str(sin):
@@ -17,7 +16,7 @@ def checkdivide(inp):
         return True
 
     outputs = []
-    
+
     for s in range(inp[0], inp[1] + 1):
 
         if selfcheck(s):
