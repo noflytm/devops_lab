@@ -12,5 +12,5 @@ for p1 in list1:
         pst3.append(p1)
 print("Your input is for list 1 is:", list1)
 print("Your input is for list 2 is:", list2)
-duplicates = set(pst3)
+duplicates = str(pst3)
 print("Your input next duplicates is", duplicates)
