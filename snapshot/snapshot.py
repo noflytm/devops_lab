@@ -44,9 +44,9 @@ def out_to_txt(line: str, name_of_file: str):
 
 def logging():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--file', type=str, default='text',
+    parser.add_argument('-f', '--file', type=str, default='txt',
                         help='file extension txt ot json')
-    parser.add_argument('-s', '--sec', type=int, default=300,
+    parser.add_argument('-s', '--sec', type=int, default=5,
                         help='Time for snapshot')
 
     args = parser.parse_args()
@@ -55,7 +55,7 @@ def logging():
 
     while True:
         time.sleep(sleep_time)
-        if out_to_json == "json":
-            out_to_json(json.dumps(Snapshot().__dict__), "log_output.json")
         if out_file == "txt":
-            out_to_txt(str(Snapshot()), "log_output.txt")
+            out_to_txt(str(Snapshot()), "out.txt")
+        if out_to_json == "json":
+            out_to_json(json.dumps(Snapshot().__dict__), "out.json")
