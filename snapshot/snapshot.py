@@ -15,7 +15,7 @@ class Snapshot:
         self.overall_cpu_usage = psutil.cpu_percent(interval=1, percpu=True)
         self.memory_total = str(psutil.virtual_memory().total)
         self.memory_available = str(psutil.virtual_memory().available)
-        self.overall_memory_us = str(psutil.virtual_memory().total - psutil.virtual_memory().available)
+        self.overall = str(psutil.virtual_memory().total - psutil.virtual_memory().available)
         self.vm = str(psutil.virtual_memory().used)
         self.hdd = str(psutil.disk_io_counters())
         self.network = str(psutil.net_io_counters())
@@ -26,7 +26,7 @@ class Snapshot:
                (self.name,
                 self.overall_cpu_usage,
                 self.memory_total,
-                self.memory_available, self.overall_memory_usage,
+                self.memory_available, self.overall,
                 self.vm, self.hdd, self.network)
 
 
