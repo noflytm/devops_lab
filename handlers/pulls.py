@@ -3,7 +3,6 @@ import requests
 your_token = {'Authorization': 'paste_your_token_here_is_major'}
 
 
-
 def get_pulls(state):
     pull = requests.get('https://api.github.com/repos/alenaPy/devops_lab/pulls', headers=your_token)
 
