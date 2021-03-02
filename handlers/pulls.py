@@ -1,15 +1,14 @@
 import requests
 
-your_token = {'Authorization': '****past_your_token_here******'}
-repo = 'https://api.github.com/repos/alenaPy/devops_lab/pulls'
+your_token = {'Authorization': 'paste_your_token_here_is_major'}
+
 
 
 def get_pulls(state):
-    pull = requests.get(repo,
-                        headers=your_token)
+    pull = requests.get('https://api.github.com/repos/alenaPy/devops_lab/pulls', headers=your_token)
 
     if state in ['open', 'closed']:
-        pull = requests.get(repo,
+        pull = requests.get('https://api.github.com/repos/alenaPy/devops_lab/pulls',
                             headers=your_token,
                             params={'state': '{0}'.format(state),
                                     'per_page': '100'})
